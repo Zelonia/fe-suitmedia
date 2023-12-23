@@ -1,0 +1,328 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Background color with transparency */
+  transition: background-color 0.3s ease; /* Transition for smooth color change */
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 2000px; /* Contoh tinggi konten agar bisa di-scroll */
+  }
+  
+  #main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang dengan opasitas 90% */
+    transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna */
+    z-index: 1000;
+  }
+  
+  #main-header.active {
+    background-color: rgba(255, 255, 255, 0); /* Transparan saat di-scroll ke bawah */
+  }
+  
+/* Add styles for logo, nav, and ul as needed */
+
+/* Add styles for active state menu 
+
+
+#main-header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+} */
+
+#main-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-100%);
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ff6800;
+}
+
+#main-header .logo img {
+    height: 40px;
+}
+
+#main-header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#main-header nav ul li {
+    margin-right: 20px;
+}
+
+#main-header nav ul li:last-child {
+    margin-right: 0;
+}
+
+#main-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+#main-header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Add a white line below the header */
+header:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Sesuaikan dengan tinggi banner Anda */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+    position: relative;
+    z-index: -1;
+}
+
+.banner .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden; /* Mengatur overflow agar bagian yang di luar clip-path terpotong */
+  }
+  
+  .banner {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.6) !important; 
+    position: relative;
+    z-index: -1;
+  }
+  
+  .banner .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+  }
+
+  
+  .list-post {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .post-card {
+    width: calc(50% - 10px); /* 50% width dengan jarak antar card */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .post-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .post-thumbnail {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Sesuaikan tinggi thumbnail */
+  }
+  
+  .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .post-info {
+    padding: 16px;
+  }
+  
+  .post-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Batasi tinggi maksimal 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Tambahkan ellipsis jika lebih dari 3 baris */
+  }
+  
+  .post-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .post-excerpt {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  
+
+.nav-list__item a[data-v-40e975bf]:before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    height: 4px;
+    width: 0;
+    background: #fff;
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear; }
+
+    .site-main {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+    }
+
+    .list-post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .baris {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .post-card {
+        flex: 1;
+        max-width: calc(25% - 10px); /* 25% dari lebar parent dengan margin 10px */
+        margin-right: 10px; /* Jarak antar kotak */
+        box-sizing: border-box; /* Biar padding tidak memengaruhi ukuran total */
+        border: 1px solid #ccc; /* Garis pembatas untuk setiap kotak */
+        padding: 10px; /* Padding di dalam kotak */
+        text-align: center; /* Teks menjadi tengah */
+      }
+
+      .list-post {
+        padding: 40px; /* Add padding to the list-post container */
+      }
+      
+      .post-card {
+        margin-bottom: 20px; /* Add margin to the bottom of each post card to create spacing */
+      }
+      
+      .post-info {
+        padding: 10px; /* Add padding to the post-info container */
+      }
+      
+      .pagination {
+        margin-top: 10px;
+      }
+      
+      #sortOption {
+        margin-top: 10px;
+      }
+      
+      .list-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .showing-info {
+        font-size: 14px;
+      }
+      
+      .page-controls {
+        display: flex;
+        align-items: center;
+      }
+      
+      .show-per-page,
+      .sort-by {
+        margin-left: 20px;
+      }
+      
+      .show-per-page select,
+      .sort-by select {
+        padding: 5px;
+        font-size: 14px;
+      }
+      
+      .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      
+      .pagination-link,
+      .pagination-number {
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      
+      .pagination-link:hover,
+      .pagination-number:hover {
+        text-decoration: underline;
+      }
+      
